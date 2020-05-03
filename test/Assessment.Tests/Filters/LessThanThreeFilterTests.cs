@@ -17,7 +17,7 @@ namespace Assessment.Tests.Filters
         }
 
         [Fact]
-        public void Returns_false_if_input_is_more_that_three()
+        public void Returns_false_if_input_is_more_than_three()
         {
             var sut = new LessThanThreeFilter();
 
@@ -25,7 +25,7 @@ namespace Assessment.Tests.Filters
         }
 
         [Fact]
-        public void Returns_true_if_input_is_less_that_three()
+        public void Returns_true_if_input_is_less_than_three()
         {
             var sut = new LessThanThreeFilter();
 
