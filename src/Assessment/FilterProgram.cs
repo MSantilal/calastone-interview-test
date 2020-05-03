@@ -1,4 +1,8 @@
-﻿using System.IO;
+﻿using System;
+using System.Collections.Generic;
+using System.Text;
+using Assessment.Filters;
+using Assessment.Processors;
 
 namespace Assessment
 {
@@ -6,10 +10,32 @@ namespace Assessment
     {
         public FilterProgram()
         {
-            var text = File.ReadAllText(Path.Combine(Directory.GetCurrentDirectory(), "assessment-text.txt"));
+            var sb = new StringBuilder();
+           
+            var wordsFromText = FileProcessor.GetText("assessment-text.txt");
 
-            var splitText = text.Split(' ');
+            var filterProcessor = new FilterProcessor(new List<IFilter>
+            {
+                new VowelInMiddleOfWordFilter(),
+                new LessThanThreeFilter(),
+                new CharTFilter()
+            });
+
+            foreach (var str in wordsFromText)
+            {
+                var processedItem = filterProcessor.Process(str);
+                if (string.IsNullOrEmpty(processedItem))
+                {
+                    continue;
+                }
+
+                sb.AppendLine(processedItem);
+            }
+
+            Console.WriteLine(sb.ToString());
         }
+
+       
     }
 
 

@@ -1,6 +1,5 @@
 ﻿using System;
 using System.Collections.Generic;
-using System.Linq;
 
 namespace Assessment.Filters
 {
@@ -34,12 +33,12 @@ namespace Assessment.Filters
         {
             if (string.IsNullOrEmpty(input))
             {
-                throw new ArgumentNullException(input, $"Param: {nameof(input)} is null.");
+                throw new ArgumentNullException(nameof(input), $"Param: {nameof(input)} is null.");
             }
 
             if (string.IsNullOrWhiteSpace(input))
             {
-                throw new ArgumentOutOfRangeException(input, $"Param: {nameof(input)} is null or has white space characters.");
+                throw new ArgumentOutOfRangeException(nameof(input), $"Param: {nameof(input)} is null or has white space characters.");
             }
 
             if (input.ToLower().Equals("the") ||

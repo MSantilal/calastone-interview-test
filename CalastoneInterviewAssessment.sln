@@ -9,7 +9,6 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Assessment.Tests", "test\As
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "docs", "docs", "{0CA16A5A-2A52-46EB-A827-AD54DBF5EEB6}"
 	ProjectSection(SolutionItems) = preProject
-		docs\assessment-text.txt = docs\assessment-text.txt
 		docs\Candidate Coding Assignment.pdf = docs\Candidate Coding Assignment.pdf
 	EndProjectSection
 EndProject

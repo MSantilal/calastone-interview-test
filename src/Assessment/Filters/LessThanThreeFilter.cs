@@ -19,12 +19,12 @@ namespace Assessment.Filters
         {
             if (string.IsNullOrEmpty(input))
             {
-                throw new ArgumentNullException(input, $"Param: {nameof(input)} is null.");
+                throw new ArgumentNullException(nameof(input), $"Param: {nameof(input)} is null.");
             }
 
             if (string.IsNullOrWhiteSpace(input))
             {
-                throw new ArgumentOutOfRangeException(input, $"Param: {nameof(input)} is null or has white space characters.");
+                throw new ArgumentOutOfRangeException(nameof(input), $"Param: {nameof(input)} is null or has white space characters.");
             }
 
             return input.Length < 3;

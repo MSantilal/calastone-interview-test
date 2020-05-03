@@ -6,7 +6,7 @@
     public interface IFilter
     {
         /// <summary>
-        /// Returns filtered text for the provided input.
+        /// Determines whether filter will be applied on input.
         /// </summary>
         /// <param name="input">The word to run the filter on</param>
         /// <returns>
