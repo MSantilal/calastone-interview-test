@@ -3,7 +3,7 @@
 namespace Assessment.Filters
 {
     /// <summary>
-    /// Provides ability to filter words out words that contain the character
+    /// Provides ability to filter out words that contain the character
     /// 't' in them.
     /// </summary>
     public class CharTFilter : IFilter

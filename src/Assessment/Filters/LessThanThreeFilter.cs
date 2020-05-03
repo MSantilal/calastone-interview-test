@@ -3,7 +3,7 @@
 namespace Assessment.Filters
 {
     /// <summary>
-    /// Provides ability to filter words out words than have a length
+    /// Provides ability to filter out words that have a length
     /// less than 3.
     /// </summary>
     public sealed class LessThanThreeFilter : IFilter
