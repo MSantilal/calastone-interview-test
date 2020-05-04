@@ -44,7 +44,7 @@ namespace Assessment.Filters
             if (input.ToLower().Equals("the") ||
                 input.ToLower().Equals("rather"))
             {
-                return true;
+                return false;
             }
             
             if (IsEven(input))

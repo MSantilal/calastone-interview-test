@@ -25,12 +25,12 @@ namespace Assessment.Tests.Filters
         }
 
         [Fact]
-        public void Returns_true_if_word_is_the_or_rather()
+        public void Returns_false_if_word_is_the_or_rather()
         {
             var sut = new VowelInMiddleOfWordFilter();
 
-            Assert.True(sut.Filter("the"));
-            Assert.True(sut.Filter("rather"));
+            Assert.False(sut.Filter("the"));
+            Assert.False(sut.Filter("rather"));
         }
 
         [Fact]
